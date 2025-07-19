@@ -1,0 +1,497 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+}
+
+section {
+  background: linear-gradient(to left, #141b22, #060606);
+  margin: 0;
+  padding: 2rem 0;
+  color: white;
+}
+
+/* About Section Styles */
+.about-content {
+  padding: 2rem 0;
+}
+
+/* Profile Image */
+.about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/* Headings */
+.section-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #f4f2f2;
+  margin-top: 4rem !important;
+}
+
+h3 {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #e9ecef;
+  font-size: 1.8rem;
+}
+
+h5 {
+  margin-top: 20px;
+  color: #0285c2;
+}
+
+/* About Text Styles */
+.about-tagline {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  display: block;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Highlights Section */
+.about-highlights {
+  margin: 1.5rem 0;
+}
+
+.highlight-item {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.highlight-item i {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.highlight-item span {
+  color: #c7cbce;
+  font-weight: 500;
+}
+
+/* Call to Action */
+.about-cta {
+  font-weight: 500;
+  color: #495057;
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-tagline {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .highlight-item {
+    font-size: 1rem;
+  }
+
+  .about-cta {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.education-contact-section {
+  margin-top: -60px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.education-box,
+.contact-box {
+  flex: 1 1 45%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.education-box:hover,
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.1);
+}
+
+.education-box p,
+.contact-box p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.education-contact-section h5 {
+  font-size: 1.3rem;
+  color: #03dac6;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.skill-category {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-category li {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.skill-category img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+/* ======= General Section Styling ======= */
+.services-section,
+.cards-row {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ======= SERVICE CARDS ======= */
+.services-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f4f3f5;
+}
+
+.services-section h5 {
+  font-size: 1.1rem;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+ box-shadow: 0 10px 20px rgba(138, 43, 226, 0.1) !important;
+  cursor: pointer;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #5c5eff;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+
+
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: -2%;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #f0f0f0;
+  text-align: justify;
+}
+
+/* Hover Service Number */
+.service-number {
+  position: absolute;
+  top: 15px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #5c5eff;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.service-card:hover .service-number {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Container grid */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  justify-items: center;
+}
+
+/* Individual block for heading + card */
+.card-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Headings outside cards */
+.goal-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #f6f5f5;
+  /* or any highlight color */
+  text-align: center;
+}
+
+/* Card style */
+.card {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(195, 0, 255, 0.1), 0 6px 14px rgba(255, 255, 255, 0.05);
+}
+
+/* Titles inside cards */
+.card-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Items inside the career card */
+.career-item {
+  margin-bottom: 1rem;
+}
+
+.career-item h6 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Interests/Hobbies list */
+.interests-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.interest-item {
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+
+.how-i-work-section {
+  padding: 50px 0;
+}
+
+.how-i-work-section .subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.work-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.work-step-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.step-number-hover {
+  position: absolute;
+  left: -40px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #5c5eff;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease-in-out;
+}
+
+.work-step-card:hover {
+  box-shadow: 0 12px 28px rgba(195, 0, 255, 0.1), 0 6px 14px rgba(255, 255, 255, 0.05);
+}
+
+.work-step-card:hover .step-number-hover {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Card container */
+.step-card-content {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Icon styling */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: #5c5eff;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* Text styling */
+.step-content h5 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #f5f1f1;
+}

@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle-btn" *ngIf="showThemeButton" (click)="toggleDarkMode()" aria-label="Toggle Dark Mode">
+    <i class="bi" [ngClass]="isDarkMode ? 'bi-sun-fill' : 'bi-moon-fill'"></i>
+</button>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" title="Go to top" (click)="scrollToTop()" *ngIf="showScrollTop">
+    ↑
+</button>

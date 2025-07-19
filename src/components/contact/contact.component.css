@@ -1,0 +1,177 @@
+.contact-background{
+  background: linear-gradient(to left,#141b22, #060606);
+  min-height: 94.5vh;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: -2%;
+}
+.social-media-section .connect-title{
+  color: #f9f9fa;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 8px;
+  border: 1px solid #363535;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+  background-color: #222;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #0d6efd;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-form {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+/* --- Social Media Buttons --- */
+.social-media-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.connect-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  font-weight: 600;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.social-buttons .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Platform Colors */
+.linkedin {
+  background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+.facebook {
+  background: linear-gradient(45deg, #3b5998, #8b9dc3);
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f94f4f, #fccc63);
+}
+
+.twitter {
+  background: linear-gradient(45deg, #1da1f2, #0d8ddb);
+}
+
+.github {
+  background: linear-gradient(45deg, #333, #555);
+}
+
+body.dark-mode .social-buttons .btn {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+

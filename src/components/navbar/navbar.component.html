@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Brand with Venfiz logo -->
+      <a class="navbar-brand d-flex align-items-center" routerLink="/" aria-label="Venfiz Logo">
+      <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Main V shape with geometric design -->
+        <path d="M20 20 L35 20 L50 65 L65 20 L80 20 L55 80 L45 80 Z" fill="#f8f4f4" />
+        <!-- Inner V accent -->
+        <path d="M30 30 L40 30 L50 55 L60 30 L70 30 L55 65 L45 65 Z" fill="#2c3e50" />
+      </svg>
+    </a>
+    
+    <!-- Custom Toggle button (no data-bs-toggle) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="toggleNavbar()"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div [ngClass]="{ 'collapse': true, 'navbar-collapse': true, 'show': navbarOpen }" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNavbar()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/experience" routerLinkActive="active" (click)="closeNavbar()">Internship</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active" (click)="closeNavbar()">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeNavbar()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
