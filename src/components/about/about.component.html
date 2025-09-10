@@ -55,72 +55,6 @@
       </div>
     </div>
 
-
-    <!-- Skills -->
- <h2 class="text-center mb-4">🛠️ Professional Skills</h2>
-<div class="skills-grid">
-  <!-- Frontend -->
-  <div class="skill-category">
-    <h3>Frontend Development</h3>
-    <p>Crafting clean, responsive, and engaging interfaces for all devices.</p>
-    <h5>Skills & Tools:</h5>
-    <ul>
-      <li><img src="assets/images/html5.svg" alt="HTML5"> HTML5</li>
-      <li><img src="assets/images/css3.svg" alt="CSS3"> CSS3</li>
-      <li><img src="assets/images/JS.svg" alt="JavaScript"> JavaScript</li>
-      <li><img src="assets/images/react.svg" alt="React.js"> React.js</li>
-      <li><img src="assets/images/angularjs.svg" alt="Angular.js"> Angular.js</li>
-      <li><img src="assets/images/typescript.svg" alt="typeScript"> TypeScript</li>
-      <li><img src="assets/images/bootstrap.svg" alt="Bootstrap"> Bootstrap</li>
-      <li><img src="assets/images/tailwind.png" alt="Tailwind CSS"> Tailwind CSS</li>
-      <li><img src="assets/images/figma.svg" alt="Figma"> Figma</li>
-      <li><img src="assets/images/design.webp" alt="Responsive Design"> Responsive Design</li>
-      <li><img src="assets/images/material.svg" alt="Material"> Material UI</li>
-    </ul>
-  </div>
-
-  <!-- Backend -->
-  <div class="skill-category">
-    <h3>Backend Development</h3>
-    <p>Building secure, scalable, and efficient server-side logic, APIs, and database integrations.</p>
-    <h5>Skills & Tools:</h5>
-    <ul>
-      <li><img src="assets/images/java.svg" alt="Postman"> Java</li>
-      <li><img src="assets/images/spring.svg" alt="Postman"> Spring boot</li>
-      <li><img src="assets/images/api.webp" alt="REST APIs"> REST APIs</li>
-      <li><img src="assets/images/jwt.svg" alt="JWT"> JWT Auth</li>
-      <li><img src="assets/images/swagger.svg" alt="Postman"> Swagger</li>
-      <li><img src="assets/images/lock.webp" alt="Authentication"> Authentication</li>
-      <li><img src="assets/images/csharp.svg" alt="Postman"> C#</li>
-      <li><img src="assets/images/nodejs.svg" alt="Node.js"> Node.js</li>
-      <li><img src="assets/images/exjs.webp" alt="Express.js"> Express.js</li>
-      <li><img src="assets/images/mongodb.svg" alt="MongoDB"> MongoDB</li>
-      <li><img src="assets/images/mysql.svg" alt="MySQL"> MySQL</li>
-      <li><img src="assets/images/algorithm.png" alt="algorithm">Data Structures Algorithm</li>
-    </ul>
-  </div>
-
-  <!-- Tools & Platforms -->
-  <div class="skill-category">
-    <h3>Tools & Platforms</h3>
-    <p>Leveraging modern tools and cloud platforms for smooth development and deployment.</p>
-    <h5>Skills & Tools:</h5>
-    <ul>
-      <li><img src="assets/images/eclipse.png" alt="Chrome DevTools"> Eclipse</li>
-      <li><img src="assets/images/postman.webp" alt="Postman"> Postman</li>
-      <li><img src="assets/images/git.svg" alt="Git & GitHub"> Git & GitHub</li>
-      <li><img src="assets/images/vscode.svg" alt="VS Code"> VS Code</li>
-      <li><img src="assets/images/netlify.png" alt="Netlify"> Netlify</li>
-      <li><img src="assets/images/vercel.png" alt="Vercel"> Vercel</li>
-      <li><img src="assets/images/canva.webp" alt="Canva"> Canva</li>
-      <li><img src="assets/images/gpt.png" alt="ChatGPT"> ChatGPT</li>
-      <li><img src="assets/images/codepen.webp" alt="CodePen"> CodePen</li>
-      <li><img src="assets/images/tools.jpg" alt="Chrome DevTools"> Chrome DevTools</li>
-    </ul>
-  </div>
-</div>
-
-
     <!-- Services Section -->
     <div class="services-section">
       <h2 class="text-center mb-4">What I Do For You</h2>
@@ -139,6 +73,30 @@
     </div>
 
 
+    <h2 class="text-center mb-4">🛠️ Professional Skills</h2>
+    <!-- Tabs -->
+    <div class="tabs">
+      <button *ngFor="let cat of skillsCategories" class="tab" [class.active]="activeCategory === cat"
+        (click)="setActiveCategory(cat)">
+        {{cat}}
+      </button>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <div *ngFor="let skill of skills[activeCategory]" class="skill-card">
+        <div class="skill-info">
+          <img [src]="skill.img" [alt]="skill.name">
+          <span>{{ skill.name }}</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.progress"></div>
+          </div>
+          <span class="percentage">{{skill.progress}}%</span>
+        </div>
+      </div>
+    </div>
 
     <!-- How I Work Section -->
     <div class="how-i-work-section">
