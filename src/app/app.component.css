@@ -18,25 +18,7 @@
     transition: background 0.3s, transform 0.3s;
     z-index: 1000;
 }
-.theme-toggle-btn {
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    color: rgb(8, 8, 8);
-    border: none;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s, transform 0.3s;
-    z-index: 1000;
-}
 
-.theme-toggle-btn:hover {
-    transform: translateY(-3px);
-}
 
 .scroll-top-btn {
     position: fixed;
@@ -56,10 +38,4 @@
 .toggle-theme:hover {
     background: orangered;
     transform: translateY(-3px);
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
 }
